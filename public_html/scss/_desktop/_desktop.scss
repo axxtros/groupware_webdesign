@@ -1,0 +1,41 @@
+
+@import "_desktopVariables.scss"; 
+
+@media (min-width: 64em) {    //1024px  
+                              
+  body {
+    background-color: $bodycolor;
+    margin-left: $desktopMargin;
+    margin-right: $desktopMargin;
+  }
+  
+  header {
+    display: block;
+    width: 100%;
+    height: $headerHight;
+  }
+  
+  .logo-header-sc {
+    width: $leftContentWidth;
+    float: left;
+    background-color: $logoDivBgColor;
+  }
+  
+  .page-header-sc {
+    width: $rightContentWidth;
+    float: left;
+    background-color: $pageHeaderBgColor;
+  }
+  
+  main {
+    display: block;
+  }
+  
+  footer {
+    display: block;
+    height: $footerHeight;
+  }
+  
+}
+
+
