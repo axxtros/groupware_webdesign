@@ -1,13 +1,69 @@
 
 @import "../_global.scss";
 
+//variables
+$fontFamily: -apple-system, "Roboto", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 $desktopMargin: 4 + $em;
 
-$headerHight: 80px;
+$desktopheaderHight: 40px;
+
 $leftContentWidth: 20%;
 $rightContentWidth: 80%;
 
-$logoHeaderBgColor: #3d4a74;
-$pageHeaderBgColor: #ffffff;
+$desktopfooterHeight: 40px;
 
-$footerHeight: 40px;
+$desktopSVGWidth: 20px;
+$desktopSVGColor: #a1aed1;
+$desktopSVGHoverColor: #5fc561;
+$desktopSVGStrokeWidth: 10;
+
+//mixins
+@mixin leftSide() { 
+  float: left;
+  width: $leftContentWidth;
+  height: 100%;
+  background-color: $sideMenuBgColor;
+}
+
+@mixin contentSide() {
+  float: left;
+  width: $rightContentWidth;
+  height: 100%;
+  background-color: $contentBgColor;
+}
+
+//svg
+svg {
+  width: $desktopSVGWidth;
+  fill: $desktopSVGColor;
+  stroke: $desktopSVGColor;
+  stroke-width: $desktopSVGStrokeWidth;
+}
+
+/*svg:hover {
+  cursor: pointer;
+  fill: $desktopSVGHoverColor;
+  stroke: $desktopSVGHoverColor;
+}*/
+
+.side-menu-item-sc {  
+  text-decoration: none !important;
+  color: $desktopSVGColor;
+  font-weight: bold;
+}
+
+.side-menu-item-text-sc {
+  
+}
+
+.side-menu-item-sc:hover {  
+  text-decoration: none !important;
+  color: $desktopSVGHoverColor;
+  cursor: pointer;
+  
+  svg {    
+    fill: $desktopSVGHoverColor;
+    stroke: $desktopSVGHoverColor;
+  }
+}

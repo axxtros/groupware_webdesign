@@ -7,34 +7,59 @@
     background-color: $bodycolor;
     margin-left: $desktopMargin;
     margin-right: $desktopMargin;
+    font-family: $fontFamily;
   }
   
-  header {
+  .header-container-sc {
     display: block;
     width: 100%;
-    height: $headerHight;
-  }
+    height: $desktopheaderHight;
+    
+    .header-side-sc {
+      @include leftSide();      
+      background-color: $logoDivBgColor;
+    }
+    
+    .header-containt-sc {
+      @include contentSide();
+    }
+    
+  }    
   
-  .logo-header-sc {
-    width: $leftContentWidth;
-    float: left;
-    background-color: $logoDivBgColor;
-  }
-  
-  .page-header-sc {
-    width: $rightContentWidth;
-    float: left;
-    background-color: $pageHeaderBgColor;
-  }
-  
-  main {
+  .main-container-sc {    
     display: block;
+    width: 100%;
+    overflow: auto;
+    background-color: $sideMenuBgColor;
+    
+    .side-menu-sc {
+      @include leftSide();
+      
+      .side-menu-icon-sc {
+        width: 20px;        
+      }      
+    }
+    
+    .content-container-sc {
+      @include contentSide();      
+    }    
   }
   
-  footer {
+  .footer-container-sc {
     display: block;
-    height: $footerHeight;
-  }
+    width: 100%;
+    height: $desktopfooterHeight;
+    
+    .footer-side-sc {
+      @include leftSide();
+      height: 100%;
+    }
+    
+    .footer-content-sc {
+      @include contentSide();
+    }
+    
+  }    
   
 }
 
