@@ -30,6 +30,80 @@
     
     .header-containt-sc {
       @include contentSide();
+      
+      .header-left-content-sc {
+        @include headerContainer();        
+        
+        .header-content-items-container-sc {
+          @include headerContantContainer();          
+          float: left;
+          margin-left: $headerContainerMargin;
+        }
+      }
+      
+      .header-right-content-sc {
+        @include headerContainer();                
+        
+        .header-content-items-container-sc {
+          @include headerContantContainer();          
+          float: right;
+          margin-right: $headerContainerMargin;
+          
+          .header-content-item-user-name-sc {
+            float: left;
+            padding-top: 10px;            
+            
+            .user-name-sc {
+              display: block;
+              font-weight: bold;
+              color: $headerUserNameTextColor;
+            }
+            
+            .user-status-sc {
+              display: block;
+              text-align: right;
+              padding-top: 6px;
+              color: $desktopSVGHoverColor;
+            }
+            
+          }
+          
+          .header-content-item-user-img-sc {
+            float: left;
+            padding-right: 10px;            
+            
+            .user-image-sc {
+              width: $desktopheaderHight - 10px;
+              height: $desktopheaderHight - 10px;
+              border-radius: 50%;
+            }            
+          }
+
+          .header-content-item-settings-icon-sc {
+            @include headerIconContent();
+           
+            svg {
+              @include headerSVGIcon();
+            }
+            
+            svg:hover {
+              @include headerSVGIconHover();
+            }                                               
+          }
+          
+          .header-content-item-messages-icon-sc {
+            @include headerIconContent();
+            
+            svg {
+              @include headerSVGIcon();              
+            }
+            
+            svg:hover {
+              @include headerSVGIconHover();
+            }
+          }          
+        }
+      }            
     }    
   }
   

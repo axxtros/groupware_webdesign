@@ -5,10 +5,14 @@
 $fontFamily: Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 $fontSize: 0.8em;
 $desktopMargin: 4em;
-$desktopheaderHight: 60px;
 $leftContentWidth: 20%;
 $rightContentWidth: 80%;
-$desktopfooterHeight: 40px;
+
+//header
+$desktopheaderHight: 60px;
+$headerTextColor: #d6dee9;
+$headerContainerMargin: 40px;
+$headerUserNameTextColor: #97a7c0;
 
 //side menu
 $sideMenuItemFrameHeight: 40px;
@@ -22,12 +26,43 @@ $sideMenuItemTextSize: 1em;
 $contentContainerMinHeight: 50px;
 
 //footer
+$desktopfooterHeight: 40px;
 $footerFontSize: 1em;
 $footerFontWeight: bold;
 $footerTextColor: #b7bec8;
 
 
 //mixins
+@mixin headerContainer() {
+  float: left;
+  width: 50%;
+  height: 100%; 
+}
+
+@mixin headerIconContent() {
+  float: left;
+  padding-top: 10px;
+  padding-right: 40px;
+}
+
+@mixin headerSVGIcon() {
+  width: 25px;
+  fill: $headerUserNameTextColor;
+  stroke: $headerUserNameTextColor;
+  stroke-width: 1;
+}
+
+@mixin headerSVGIconHover() {
+  fill: $desktopSVGHoverColor;
+  stroke: $desktopSVGHoverColor;
+}
+
+@mixin headerContantContainer() {
+  height: $desktopheaderHight - 10px;
+  padding-top: 5px;
+  color: $headerTextColor;
+}
+
 @mixin leftSide() { 
   float: left;
   width: $leftContentWidth;
