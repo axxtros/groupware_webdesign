@@ -8,6 +8,7 @@
     margin-left: $desktopMargin;
     margin-right: $desktopMargin;
     font-family: $fontFamily;
+    font-size: $fontSize;
   }
   
   .header-container-sc {
@@ -16,33 +17,86 @@
     height: $desktopheaderHight;
     
     .header-side-sc {
-      @include leftSide();      
+      @include leftSide();
       background-color: $logoDivBgColor;
+
+      .header-logo-frame-sc {
+        width: 200px;
+        height: 40px;
+        margin: 5px 0 0 70px;
+        background: $logoDivBgColor url('../..//imgs/logo.png') no-repeat;
+      }      
     }
     
     .header-containt-sc {
       @include contentSide();
-    }
-    
-  }    
+    }    
+  }
   
   .main-container-sc {    
     display: block;
     width: 100%;
-    overflow: auto;
+    height: 100%;
     background-color: $sideMenuBgColor;
     
     .side-menu-sc {
       @include leftSide();
       
-      .side-menu-icon-sc {
-        width: 20px;        
+      .side-menu-item-sc {  
+        text-decoration: none !important;
+        color: $desktopSVGColor;
+        font-weight: bold;
+        
+        .side-menu-item-frame-sc {
+          padding-left: 20px;
+          height: $sideMenuItemFrameHeight;
+
+          .side-menu-item-text-sc {
+            margin-left: 10px;
+            vertical-align: super;
+            font-size: $sideMenuItemTextSize;
+          }
+        }        
+      }
+
+      svg {
+        width: $desktopSVGWidth;
+        fill: $desktopSVGColor;
+        stroke: $desktopSVGColor;
+        stroke-width: $desktopSVGStrokeWidth;
+        margin-top: 12px;
+      }
+
+      .side-menu-item-sc:hover {  
+        text-decoration: none !important;
+        color: $desktopSVGHoverColor;
+        cursor: pointer;
+
+        svg {    
+          fill: $desktopSVGHoverColor;
+          stroke: $desktopSVGHoverColor;
+        }
+        
+        .side-menu-item-frame-sc {
+          background-color: $logoDivBgColor;
+        }        
+      }
+      
+      .side-menu-empty-sc {
+        overflow: hidden;
+        position: relative;
+        min-height: 100%;
+        background-color: $sideMenuBgColor;        
       }      
     }
     
     .content-container-sc {
-      @include contentSide();      
-    }    
+      @include contentSide();
+
+      .content-container-frame-sc {
+        min-height: $contentContainerMinHeight;        
+      }      
+    }
   }
   
   .footer-container-sc {
@@ -57,9 +111,29 @@
     
     .footer-content-sc {
       @include contentSide();
-    }
-    
-  }    
+      font-size: $footerFontSize;
+      font-weight: $footerFontWeight;
+      
+      .footer-left-content-sc {        
+        @include footerContainer();
+        
+        span {
+          margin-left: 20px;
+          color: $footerTextColor;
+        }
+      }
+      
+      .footer-right-content-sc {
+        @include footerContainer();
+        
+        span {
+          float: right;
+          margin-right: 20px;
+          color: $footerTextColor;
+        }
+      }      
+    }    
+  }  
   
 }
 

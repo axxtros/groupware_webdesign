@@ -3,13 +3,11 @@
  */
 
 function init() {
-  contentHeightInit();
+  sideMenuBgHeightInit();
 }
 
-function contentHeightInit() {
-  var sideMenuHieght = $('#side-menu').height();
-  var contentHieght = $('#content-container').height();    
-  if(sideMenuHieght > contentHieght) {
-    $('#content-container').css('height', sideMenuHieght + 'px');
-  }
+function sideMenuBgHeightInit() {  
+  var sideMenuEmyptyDivTop = $('.side-menu-empty-sc').position().top;
+  var footerContainerDivTop = $('.footer-side-sc').position().top;
+  $('.side-menu-empty-sc').css('height', footerContainerDivTop - sideMenuEmyptyDivTop + 'px');  
 }
