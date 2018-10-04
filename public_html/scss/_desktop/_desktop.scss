@@ -4,11 +4,11 @@
 @media (min-width: 64em) {    //1024px  
                               
   body {
-    background-color: $bodycolor;
     margin-left: $desktopMargin;
     margin-right: $desktopMargin;
     font-family: $fontFamily;
     font-size: $fontSize;
+    background-color: $bodycolor;
   }
   
   .warning-dot {    
@@ -48,6 +48,7 @@
           @include headerContantContainer();          
           float: left;
           margin-left: $headerContainerMargin;
+          width: 100%;
         }
       }
       
@@ -143,6 +144,7 @@
         .side-menu-item-frame-sc {
           padding-left: 20px;
           height: $sideMenuItemFrameHeight;
+          border-bottom: 1px solid #54659d;          
 
           .side-menu-item-text-sc {
             margin-left: 10px;
@@ -175,8 +177,7 @@
         }        
       }
       
-      .side-menu-empty-sc {
-        overflow: hidden;
+      .side-menu-empty-sc {        
         position: relative;
         min-height: 100%;
         background-color: $sideMenuBgColor;        
@@ -189,6 +190,51 @@
       .content-container-frame-sc {
         min-height: $contentContainerMinHeight;        
       }      
+    }
+  }
+  
+  //content block
+  .content-block-sc {
+    display: block;
+    width: 100%;
+    
+    .content-block-header-sc {
+      height: 40px;
+      border-top: 1px solid $contentBlockHeaderBorderColor;
+      border-bottom: 1px solid $contentBlockHeaderBorderColor;
+      border-left: $contentMargin solid $contentBlockHeaderBorderColor;
+      background-color: $contentBlockHeaderBgColor;
+      
+      .content-block-title-sc {
+        float: left;
+        padding: 14px 0 0 10px;
+        font-weight: bold;
+        color: $greyColor;
+      }
+      
+      .content-block-closeIcon-sc {
+        @include contentPanelBlockHeader();        
+        svg {
+          @include contentPanelBlockHeaderSvg();
+        }       
+      }
+      
+      .content-block-openIcon-sc {
+        @include contentPanelBlockHeader();        
+        display: none;
+        padding: 5px 40px 0 0;
+        svg {
+          @include contentPanelBlockHeaderSvg();
+        }       
+      }
+    }
+    
+    .content-block-header-sc:hover {
+      background-color: $contentBlockHeaderBorderColor;
+    }
+    
+    .content-block-content-sc {
+      margin: $contentMargin;
     }
   }
   
@@ -206,6 +252,7 @@
       @include contentSide();
       font-size: $footerFontSize;
       font-weight: $footerFontWeight;
+      background-color: #e3e3e3;
       
       .footer-left-content-sc {        
         @include footerContainer();

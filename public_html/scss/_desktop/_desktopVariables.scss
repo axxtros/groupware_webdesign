@@ -7,8 +7,10 @@ $fontSize: 0.8em;
 $desktopMargin: 4em;
 $leftContentWidth: 20%;
 $rightContentWidth: 80%;
-$greyColor: #3d4b58;
+$greyColor: #3d4b58; 
 $activeRed: #fa777c;
+$contentBlockHeaderBgColor: #e5e7ea;
+$contentBlockHeaderBorderColor: #d6d9de;
 
 //header
 $desktopheaderHight: 60px;
@@ -27,12 +29,13 @@ $sideMenuItemTextSize: 1em;
 
 //content
 $contentContainerMinHeight: 50px;
+$contentMargin: 5px;
 
 //footer
 $desktopfooterHeight: 40px;
-$footerFontSize: 1em;
-$footerFontWeight: bold;
-$footerTextColor: #b7bec8;
+$footerFontSize: 0.8em;
+$footerFontWeight: normal;
+$footerTextColor: #a3a9b1;
 
 
 //mixins
@@ -80,8 +83,21 @@ $footerTextColor: #b7bec8;
   background-color: $pageHeaderBgColor;
 }
 
+@mixin contentPanelBlockHeader() {
+  display: block;
+  float: right;
+  padding: 14px 40px 0 0;
+}
+
+@mixin contentPanelBlockHeaderSvg() {
+  width: 18px;
+  fill: $headerUserNameTextColor;
+  stroke: $headerUserNameTextColor;
+  stroke-width: 10;
+}
+
 @mixin footerContainer() {
   float: left;
   width: 50%;
-  padding-top: 10px;
+  padding-top: 15px;
 }
