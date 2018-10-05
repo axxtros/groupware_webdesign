@@ -3,13 +3,17 @@
  */
 
 function init() {
-  //sideMenuBgHeightInit();
+  setLogoImgPos();
 }
 
-function sideMenuBgHeightInit() {  
-  var sideMenuEmyptyDivTop = $('.side-menu-empty-sc').position().top;
-  var footerContainerDivTop = $('.footer-side-sc').position().top;
-  $('.side-menu-empty-sc').css('height', footerContainerDivTop - sideMenuEmyptyDivTop + 'px');  
+function setLogoImgPos() {
+  var headerSideWidth = $('.header-side-sc').width();
+  var logoFrame = $('.header-logo-frame-sc');
+  var logoFrameWidth = logoFrame.width();  
+  if(headerSideWidth < logoFrameWidth) {
+    logoFrameWidth = headerSideWidth;
+  }  
+  $(logoFrame).css('margin-left', ((headerSideWidth - logoFrameWidth) / 2) + 'px');
 }
 
 function blockPanelCtrl(blockPanelAnchor) {  

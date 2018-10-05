@@ -4,8 +4,7 @@
 @media (min-width: 64em) {    //1024px  
                               
   body {
-    margin-left: $desktopMargin;
-    margin-right: $desktopMargin;
+    margin: 0 $desktopMargin 0 $desktopMargin;
     font-family: $fontFamily;
     font-size: $fontSize;
     background-color: $bodycolor;
@@ -33,8 +32,12 @@
       .header-logo-frame-sc {
         width: 200px;
         height: 40px;
-        margin: 5px 0 0 70px;
-        background: $logoDivBgColor url('../..//imgs/logo.png') no-repeat;
+        margin: 10px 0 0 70px;        
+        
+        img {
+          width: 160px;
+        }
+        
       }      
     }
     
