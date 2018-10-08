@@ -37,6 +37,10 @@ $footerFontSize: 0.8em;
 $footerFontWeight: normal;
 $footerTextColor: #a3a9b1;
 
+//commons
+$buttonMargin: 5px;
+$desktopButtonHeight: 30px;
+
 
 //mixins
 @mixin headerContainer() {

@@ -1,0 +1,43 @@
+
+//buttons ----------------------------------------------------------------------
+.button-sc {  
+  border: none;  
+  color: $buttonTextColor;
+}
+
+.button-sc:hover {
+  cursor: pointer;  
+}
+
+.button-green-sc {
+  background-color: $buttonBgGreenColor;    
+}
+
+.button-green-sc:hover {
+  background-color: $buttonBgGreenHoverColor;
+}
+
+.button-red-sc {
+  background-color: $buttonBgRedColor;    
+}
+
+.button-red-sc:hover {
+  background-color: $buttonBgRedHoverColor;
+}
+
+.button-yellow-sc {
+  background-color: $buttonBgYellowColor;    
+}
+
+.button-yellow-sc:hover {
+  background-color: $buttonBgYellowHoverColor;
+}
+
+.button-purple-sc {
+  background-color: $buttonBgPurpleColor;    
+}
+
+.button-purple-sc:hover {
+  background-color: $buttonBgPurpleHoverColor;
+}
+//buttons end ------------------------------------------------------------------

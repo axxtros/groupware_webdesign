@@ -277,6 +277,15 @@
       }      
     }    
   }  
+ 
+  .button-sc {
+    min-width: 100px;
+    height: $desktopButtonHeight;
+    margin: $buttonMargin;
+    border-radius: $desktopButtonHeight / 2;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
   
 }
 
