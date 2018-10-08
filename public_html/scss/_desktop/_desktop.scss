@@ -278,13 +278,22 @@
     }    
   }  
  
-  .button-sc {
-    min-width: 100px;
-    height: $desktopButtonHeight;
+  //commons
+  
+  input[type=button] {
+    min-width: $commonsMinWidth;
+    height: $desktopCommonsHeight;
     margin: $buttonMargin;
-    border-radius: $desktopButtonHeight / 2;
+    border-radius: $desktopCommonsHeight / 2;
     font-weight: bold;
     font-size: 1.2em;
+  }
+  
+  input[type=text] {
+    min-width: $commonsMinWidth;
+    height: $desktopCommonsHeight;
+    padding-left: 5px;
+    color: $greyColor;
   }
   
 }

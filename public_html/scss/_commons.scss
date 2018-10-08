@@ -1,11 +1,11 @@
 
 //buttons ----------------------------------------------------------------------
-.button-sc {  
+input[type=button] {  
   border: none;  
   color: $buttonTextColor;
 }
 
-.button-sc:hover {
+input[type=button]:hover {
   cursor: pointer;  
 }
 
@@ -41,3 +41,18 @@
   background-color: $buttonBgPurpleHoverColor;
 }
 //buttons end ------------------------------------------------------------------
+
+//inputs -----------------------------------------------------------------------
+input[type=text], textarea {
+  border: 1px solid $inputBorderColor;
+}
+
+input[type=text]:hover, textarea:hover {
+  border: 1px solid $inputBorderHoverColor;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px $inputBorderHoverColor;
+  border: 1px solid $inputBorderHoverColor;
+}
+//inputs end -------------------------------------------------------------------
