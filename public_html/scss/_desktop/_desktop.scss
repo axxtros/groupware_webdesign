@@ -138,6 +138,7 @@
     
     .side-menu-sc {
       @include leftSide();
+      margin-top: $contentBlockHeaderHeight;
       
       .side-menu-item-sc {  
         text-decoration: none !important;
@@ -155,8 +156,8 @@
             font-size: $sideMenuItemTextSize;
           }
         }        
-      }
-
+      }      
+      
       svg {
         width: $desktopSVGWidth;
         fill: $desktopSVGColor;
@@ -190,8 +191,22 @@
     .content-container-sc {
       @include contentSide();
 
-      .content-container-frame-sc {
-        min-height: $contentContainerMinHeight;        
+      .content-container-frame-sc {        
+        
+        .page-block-title-wrapper-sc {
+          display: block;
+          @include contentBlockHeader();
+          border-bottom: 0px;
+          
+          .page-block-title-sc {
+            float: left;
+            padding: 12px 0 0 10px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: $greyColor;
+          }
+          
+        }        
       }      
     }
   }
@@ -202,11 +217,7 @@
     width: 100%;
     
     .content-block-header-sc {
-      height: 40px;
-      border-top: 1px solid $contentBlockHeaderBorderColor;
-      border-bottom: 1px solid $contentBlockHeaderBorderColor;
-      border-left: $contentMargin solid $contentBlockHeaderBorderColor;
-      background-color: $contentBlockHeaderBgColor;
+      @include contentBlockHeader();
       
       .content-block-title-sc {
         float: left;

@@ -30,6 +30,7 @@ $sideMenuItemTextSize: 1em;
 //content
 $contentContainerMinHeight: 50px;
 $contentMargin: 5px;
+$contentBlockHeaderHeight: 40px;
 
 //footer
 $desktopfooterHeight: 40px;
@@ -86,6 +87,14 @@ $desktopCommonsHeight: 24px;
   width: $rightContentWidth;
   height: 100%;
   background-color: $pageHeaderBgColor;
+}
+
+@mixin contentBlockHeader() {
+  height: $contentBlockHeaderHeight;
+  border-top: 1px solid $contentBlockHeaderBorderColor;
+  border-bottom: 1px solid $contentBlockHeaderBorderColor;
+  border-left: $contentMargin solid $contentBlockHeaderBorderColor;
+  background-color: $contentBlockHeaderBgColor;
 }
 
 @mixin contentPanelBlockHeader() {
