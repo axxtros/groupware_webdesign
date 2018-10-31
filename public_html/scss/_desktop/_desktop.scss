@@ -27,7 +27,7 @@
     
     .header-side-sc {
       @include leftSide();
-      background-color: $logoDivBgColor;
+      background-color: $sideMenuBgColor;
 
       .header-logo-frame-sc {
         width: 200px;
@@ -134,11 +134,27 @@
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: $sideMenuBgColor;
+    background-color: white; //$contentBgColor; //$sideMenuBgColor;    
     
     .side-menu-sc {
       @include leftSide();
       margin-top: $contentBlockHeaderHeight;
+      
+      .side-menu-group-wrapper-sc {
+        display: block;
+        padding-left: $sideMenuLeftPadding;
+        height: $sideMenuItemFrameHeight;
+        
+        .side-menu-group-title-sc {
+          display: block;
+          padding-top: 13px;
+          vertical-align: super;
+          font-size: $sideMenuGroupTextSize;
+          font-weight: bold;          
+          color: $desktopSVGColor;
+          border-bottom: 1px solid #54659d;
+        }        
+      }
       
       .side-menu-item-sc {  
         text-decoration: none !important;
@@ -146,9 +162,9 @@
         font-weight: bold;
         
         .side-menu-item-frame-sc {
-          padding-left: 20px;
+          padding-left: $sideMenuLeftPadding;
           height: $sideMenuItemFrameHeight;
-          border-bottom: 1px solid #54659d;          
+          //border-bottom: 1px solid #54659d;
 
           .side-menu-item-text-sc {
             margin-left: 10px;
@@ -177,6 +193,7 @@
         }
         
         .side-menu-item-frame-sc {
+          border-radius: 50px 0px 0px 50px;
           background-color: $logoDivBgColor;
         }        
       }
