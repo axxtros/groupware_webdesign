@@ -7,7 +7,8 @@
     margin: 0 $desktopMargin 0 $desktopMargin;
     font-family: $fontFamily;
     font-size: $fontSize;
-    background-color: $bodycolor;    
+    background-color: $bodycolor; 
+    color: $defaultTextColor;
   }
   
   .warning-dot {    
@@ -252,10 +253,9 @@
             font-size: 1.4em;
             font-weight: bold;
             color: $greyColor;
-          }
-          
-        }        
-      }      
+          }          
+        }
+      }
     }
   }
   
@@ -292,7 +292,12 @@
     }
     
     .content-block-header-sc:hover {
-      background-color: $contentBlockHeaderBorderColor;
+      border-left: $contentMargin solid $contentBlockHeaderHoverBorderColor;
+      background-color: $contentBlockHeaderHoverColor;
+      
+      .content-block-title-sc {
+        color: $contentBlockHeaderHoverBorderColor;
+      }
     }
     
     .content-block-content-sc {

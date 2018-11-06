@@ -7,10 +7,12 @@ $fontSize: 0.8em;
 $desktopMargin: 4em;
 $leftContentWidth: 20%;
 $rightContentWidth: 80%;
-$greyColor: #3d4b58; 
+$greyColor: #5d707f; //#3d4b58; 
 $activeRed: #fa777c;
 $contentBlockHeaderBgColor: #e5e7ea;
 $contentBlockHeaderBorderColor: #d6d9de;
+$contentBlockHeaderHoverColor: $defaultBlueColor;
+$contentBlockHeaderHoverBorderColor: #ffffff;
 $bodyBorderRadius: 10px;
 
 //header
