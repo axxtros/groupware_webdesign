@@ -7,7 +7,7 @@
     margin: 0 $desktopMargin 0 $desktopMargin;
     font-family: $fontFamily;
     font-size: $fontSize;
-    background-color: $bodycolor;
+    background-color: $bodycolor;    
   }
   
   .warning-dot {    
@@ -28,21 +28,22 @@
     .header-side-sc {
       @include leftSide();
       background-color: $sideMenuBgColor;
+      //border-top-left-radius: $bodyBorderRadius;
 
       .header-logo-frame-sc {
-        width: 200px;
+        width: 180px;
         height: 40px;
-        margin: 10px 0 0 70px;        
+        margin: 20px 0 0 70px;
         
         img {
-          width: 160px;
-        }
-        
+          width: 180px;
+        }        
       }      
     }
     
     .header-containt-sc {
       @include contentSide();
+      //border-top-right-radius: $bodyBorderRadius;
       
       .header-left-content-sc {
         @include headerContainer();        
@@ -56,7 +57,7 @@
       }
       
       .header-right-content-sc {
-        @include headerContainer();                
+        @include headerContainer();        
         
         .header-content-items-container-sc {
           @include headerContantContainer();          
@@ -78,7 +79,7 @@
               padding-top: 2px;
               font-size: 0.8em;
               font-weight: bold;
-              color: $desktopSVGHoverColor;
+              color: #4559bb; //$desktopSVGHoverColor;
             }
             
             .user-team-name-sc {
@@ -155,9 +156,9 @@
             width: 100%;
             height: 100%;            
             border-radius: 50px; // 10px 0 0;
-            background-color: #3e4468;
-            border: 1px solid #3e4468;
-            color: white;
+            background-color: #202d36; //#3e4468;            
+            border: 1px solid #000000; //#3e4468;
+            color: #becbd4; //white;
             padding-left: 20px;
             outline: none;            
 
@@ -182,7 +183,7 @@
           font-size: $sideMenuGroupTextSize;
           font-weight: bold;          
           color: $desktopSVGColor;
-          border-bottom: 1px solid #54659d;
+          border-bottom: 1px solid #48555e;
         }        
       }
       
@@ -307,6 +308,7 @@
     .footer-side-sc {
       @include leftSide();
       height: 100%;
+      border-bottom-left-radius: $bodyBorderRadius;
     }
     
     .footer-content-sc {
@@ -314,6 +316,7 @@
       font-size: $footerFontSize;
       font-weight: $footerFontWeight;
       background-color: #e3e3e3;
+      border-bottom-right-radius: $bodyBorderRadius;
       
       .footer-left-content-sc {        
         @include footerContainer();
