@@ -138,16 +138,46 @@
     
     .side-menu-sc {
       @include leftSide();
-      margin-top: $contentBlockHeaderHeight;
+      //margin-top: $contentBlockHeaderHeight;
+      
+      .side-menu-selector-wrapper-sc {
+        display: block;
+        height: $sideMenuSelectorHeight;
+        
+        .selector-wrapper-sc {
+          display: block;
+          width: 80%;
+          height: 36px;
+          padding-top: 25px;
+          margin : 0 auto;
+          
+          .project-selector-sc {            
+            width: 100%;
+            height: 100%;            
+            border-radius: 50px; // 10px 0 0;
+            background-color: #3e4468;
+            border: 1px solid #3e4468;
+            color: white;
+            padding-left: 20px;
+            outline: none;            
+
+            option {
+              color: white;              
+            }
+            
+          }          
+        }        
+      }
       
       .side-menu-group-wrapper-sc {
         display: block;
-        padding-left: $sideMenuLeftPadding;
+        padding-left: $sideMenuGroupWrapperPaddingLeft;
         height: $sideMenuItemFrameHeight;
         
         .side-menu-group-title-sc {
           display: block;
-          padding-top: 13px;
+          padding-top: 14px;
+          padding-bottom: 4px;
           vertical-align: super;
           font-size: $sideMenuGroupTextSize;
           font-weight: bold;          
@@ -163,8 +193,8 @@
         
         .side-menu-item-frame-sc {
           padding-left: $sideMenuLeftPadding;
-          height: $sideMenuItemFrameHeight;
-          //border-bottom: 1px solid #54659d;
+          margin-left: $sideMenuLeftMargin;
+          height: $sideMenuItemFrameHeight;          
 
           .side-menu-item-text-sc {
             margin-left: 10px;
@@ -194,7 +224,7 @@
         
         .side-menu-item-frame-sc {
           border-radius: 50px 0px 0px 50px;
-          background-color: $logoDivBgColor;
+          background-color: $logoDivBgColor;          
         }        
       }
       
