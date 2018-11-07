@@ -4,6 +4,10 @@
 $em: em;
 $percent: "%";
 
+$desktopSizeLarge : 1;
+$desktopSizeMedium : 2;
+$desktopSizeSmall : 3;
+
 $bodycolor: #ffffff;
 $defaultTextColor: #2a3137;
 $defaultBlueColor: #137cbd;
@@ -26,3 +30,9 @@ $buttonBgYellowColor: #edddb9;
 $buttonBgYellowHoverColor: #eabc58;
 $buttonBgPurpleColor: #b9c0ea;
 $buttonBgPurpleHoverColor: #7f8be3;
+
+/*
+  https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
+  https://drafts.csswg.org/css-device-adapt/#viewport-meta
+
+*/

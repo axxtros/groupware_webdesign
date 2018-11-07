@@ -1,10 +1,11 @@
 
-@import "_desktopVariables.scss"; 
+@import "../_desktop/_desktopVariables.scss";
 
-@media (min-width: 64em) {    //1024px  
-                              
+//Device = Laptops, Desktops
+@media (min-width: 1024px) and (max-width: 1280px) {
+  
   body {
-    margin: 0 $desktopMargin 0 $desktopMargin;
+    margin: 0 $noMargin 0 $noMargin;
     font-family: $fontFamily;
     font-size: $fontSize;
     background-color: $bodycolor; 
@@ -27,7 +28,7 @@
     height: $desktopheaderHight;
     
     .header-side-sc {
-      @include leftSide();
+      @include leftSide($desktopSizeMedium);
       background-color: $sideMenuBgColor;
       //border-top-left-radius: $bodyBorderRadius;
 
@@ -43,7 +44,7 @@
     }
     
     .header-containt-sc {
-      @include contentSide();
+      @include contentSide($desktopSizeMedium);
       //border-top-right-radius: $bodyBorderRadius;
       
       .header-left-content-sc {
@@ -139,7 +140,7 @@
     background-color: white; //$contentBgColor; //$sideMenuBgColor;    
     
     .side-menu-sc {
-      @include leftSide();
+      @include leftSide($desktopSizeMedium);
       //margin-top: $contentBlockHeaderHeight;
       
       .side-menu-selector-wrapper-sc {
@@ -173,7 +174,7 @@
       
       .side-menu-group-wrapper-sc {
         display: block;
-        padding-left: $sideMenuGroupWrapperPaddingLeft;
+        padding-left: 0px;
         height: $sideMenuItemFrameHeight;
         
         .side-menu-group-title-sc {
@@ -181,7 +182,8 @@
           padding-top: 14px;
           padding-bottom: 4px;
           vertical-align: super;
-          font-size: $sideMenuGroupTextSize;
+          text-align: center;
+          font-size: 0.9em; //$sideMenuGroupTextSize;
           font-weight: bold;          
           color: $desktopSVGColor;
           border-bottom: 1px solid #48555e;
@@ -194,11 +196,15 @@
         font-weight: bold;
         
         .side-menu-item-frame-sc {
-          padding-left: $sideMenuLeftPadding;
-          margin-left: $sideMenuLeftMargin;
-          height: $sideMenuItemFrameHeight;          
+          display: table;
+          margin-left: auto;
+          margin-right: auto;
+          //padding-left: 30px;
+          //margin-left: 0px;
+          height: $sideMenuItemFrameHeight;        
 
           .side-menu-item-text-sc {
+            display: none;
             margin-left: 10px;
             vertical-align: super;
             font-size: $sideMenuItemTextSize;
@@ -238,7 +244,7 @@
     }
     
     .content-container-sc {
-      @include contentSide();
+      @include contentSide($desktopSizeMedium);
 
       .content-container-frame-sc {        
         
@@ -311,13 +317,13 @@
     height: $desktopfooterHeight;
     
     .footer-side-sc {
-      @include leftSide();
+      @include leftSide($desktopSizeMedium);
       height: 100%;
       border-bottom-left-radius: $bodyBorderRadius;
     }
     
     .footer-content-sc {
-      @include contentSide();
+      @include contentSide($desktopSizeMedium);
       font-size: $footerFontSize;
       font-weight: $footerFontWeight;
       background-color: #e3e3e3;
@@ -363,5 +369,3 @@
   }
   
 }
-
-

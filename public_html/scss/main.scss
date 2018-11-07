@@ -6,8 +6,9 @@
 @import "_global.scss";
 @import "_reset.scss";
 
-@import "_desktop/_desktop.scss";
-@import "_tablet/_tablet.scss";
+@import "_desktop/_desktop_large.scss";
+@import "_desktop/_desktop_medium.scss";
+@import "_desktop/_desktop_small.scss";
 @import "_phone/_phone.scss";
 
 @import "_commons.scss";

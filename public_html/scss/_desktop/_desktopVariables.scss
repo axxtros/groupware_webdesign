@@ -15,6 +15,10 @@ $contentBlockHeaderHoverColor: $defaultBlueColor;
 $contentBlockHeaderHoverBorderColor: #ffffff;
 $bodyBorderRadius: 10px;
 
+$noMargin: 0em;
+$mediumLeftContentWidth: 10%;
+$mediumRightContentWidth: 90%;
+
 //header
 $desktopheaderHight: 60px;
 $headerTextColor: #d6dee9;
@@ -83,16 +87,24 @@ $desktopCommonsHeight: 24px;
   color: $headerTextColor;
 }
 
-@mixin leftSide() { 
-  float: left;
-  width: $leftContentWidth;
+@mixin leftSide($dekstopSize) { 
+  float: left;  
+  @if $dekstopSize == $desktopSizeLarge {
+    width: $leftContentWidth;    
+  } @else {
+    width: $mediumLeftContentWidth;
+  }
   height: 100%;
   background-color: $sideMenuBgColor;
 }
 
-@mixin contentSide() {
+@mixin contentSide($dekstopSize) {
   float: left;
-  width: $rightContentWidth;
+  @if $dekstopSize == $desktopSizeLarge {
+    width: $rightContentWidth;    
+  } @else {
+    width: $mediumRightContentWidth;
+  }
   height: 100%;
   background-color: $pageHeaderBgColor;
 }

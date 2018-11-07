@@ -1,0 +1,371 @@
+
+@import "../_desktop/_desktopVariables.scss";
+
+//Device = Desktop, Tablets, Ipads (portrait)
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+  body {
+    margin: 0 $noMargin 0 $noMargin;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    background-color: $bodycolor; 
+    color: $defaultTextColor;
+  }
+  
+  .warning-dot {    
+    float: right;
+    margin-left: 2px;
+    height: 10px;
+    width: 10px;
+    background-color: $activeRed;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .header-container-sc {
+    display: block;
+    width: 100%;
+    height: $desktopheaderHight;
+    
+    .header-side-sc {
+      @include leftSide($desktopSizeSmall);
+      background-color: $sideMenuBgColor;
+      //border-top-left-radius: $bodyBorderRadius;
+
+      .header-logo-frame-sc {
+        width: 180px;
+        height: 40px;
+        margin: 20px 0 0 70px;
+        
+        img {
+          width: 180px;
+        }        
+      }      
+    }
+    
+    .header-containt-sc {
+      @include contentSide($desktopSizeSmall);
+      //border-top-right-radius: $bodyBorderRadius;
+      
+      .header-left-content-sc {
+        @include headerContainer();        
+        
+        .header-content-items-container-sc {
+          @include headerContantContainer();          
+          float: left;
+          margin-left: $headerContainerMargin;
+          width: 100%;
+        }
+      }
+      
+      .header-right-content-sc {
+        @include headerContainer();        
+        
+        .header-content-items-container-sc {
+          @include headerContantContainer();          
+          float: right;
+          margin-right: $headerContainerMargin;
+          
+          .header-content-item-user-name-sc {
+            float: left;
+            padding-top: 4px;
+            
+            .user-name-sc {
+              display: block;
+              font-weight: bold;
+              color: $headerUserNameTextColor;
+            }
+            
+            .user-status-sc {
+              display: block;              
+              padding-top: 2px;
+              font-size: 0.8em;
+              font-weight: bold;
+              color: #4559bb; //$desktopSVGHoverColor;
+            }
+            
+            .user-team-name-sc {
+              display: block;              
+              padding-top: 8px;
+              font-weight: bold;
+              font-size: 0.8em;
+              color: $greyColor;
+            }
+            
+          }
+          
+          .header-content-item-user-img-sc {
+            float: left;
+            padding-right: 10px;            
+            
+            .user-image-sc {
+              width: $headerUserImageSize;
+              height: $headerUserImageSize;
+              border-radius: 50%;
+            }            
+          }
+
+          .header-content-item-settings-icon-sc {
+            @include headerIconContent();
+           
+            svg {
+              @include headerSVGIcon();
+            }
+            
+            svg:hover {
+              @include headerSVGIconHover();
+            }                                               
+          }
+          
+          .header-content-item-messages-icon-sc {
+            @include headerIconContent();
+            
+            svg {
+              @include headerSVGIcon();              
+            }
+            
+            svg:hover {
+              @include headerSVGIconHover();
+            }
+          }          
+        }
+      }            
+    }    
+  }
+  
+  .main-container-sc {    
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white; //$contentBgColor; //$sideMenuBgColor;    
+    
+    .side-menu-sc {
+      @include leftSide($desktopSizeSmall);
+      //margin-top: $contentBlockHeaderHeight;
+      
+      .side-menu-selector-wrapper-sc {
+        display: block;
+        height: $sideMenuSelectorHeight;
+        
+        .selector-wrapper-sc {
+          display: block;
+          width: 80%;
+          height: 36px;
+          padding-top: 25px;
+          margin : 0 auto;
+          
+          .project-selector-sc {            
+            width: 100%;
+            height: 100%;            
+            border-radius: 50px; // 10px 0 0;
+            background-color: #202d36; //#3e4468;            
+            border: 1px solid #000000; //#3e4468;
+            color: #becbd4; //white;
+            padding-left: 20px;
+            outline: none;            
+
+            option {
+              color: white;              
+            }
+            
+          }          
+        }        
+      }
+      
+      .side-menu-group-wrapper-sc {
+        display: block;
+        padding-left: 0px;
+        height: $sideMenuItemFrameHeight;
+        
+        .side-menu-group-title-sc {
+          display: block;
+          padding-top: 14px;
+          padding-bottom: 4px;
+          vertical-align: super;
+          text-align: center;
+          font-size: 0.6em; //$sideMenuGroupTextSize;
+          font-weight: bold;          
+          color: $desktopSVGColor;
+          border-bottom: 1px solid #48555e;
+        }
+      }
+      
+      .side-menu-item-sc {  
+        text-decoration: none !important;
+        color: $desktopSVGColor;
+        font-weight: bold;
+        
+        .side-menu-item-frame-sc {
+          display: table;
+          margin-left: auto;
+          margin-right: auto;
+          //padding-left: 30px;
+          //margin-left: 0px;
+          height: $sideMenuItemFrameHeight; 
+
+          .side-menu-item-text-sc {
+            display: none;
+            margin-left: 10px;
+            vertical-align: super;
+            font-size: $sideMenuItemTextSize;
+          }
+        }        
+      }      
+      
+      svg {
+        width: $desktopSVGWidth;
+        fill: $desktopSVGColor;
+        stroke: $desktopSVGColor;
+        stroke-width: $desktopSVGStrokeWidth;
+        margin-top: 12px;
+      }
+
+      .side-menu-item-sc:hover {  
+        text-decoration: none !important;
+        color: $desktopSVGHoverColor;
+        cursor: pointer;
+
+        svg {    
+          fill: $desktopSVGHoverColor;
+          stroke: $desktopSVGHoverColor;
+        }
+        
+        .side-menu-item-frame-sc {
+          border-radius: 50px 0px 0px 50px;
+          background-color: $logoDivBgColor;          
+        }        
+      }
+      
+      .side-menu-empty-sc {        
+        position: relative;
+        min-height: 100%;
+        background-color: $sideMenuBgColor;        
+      }      
+    }
+    
+    .content-container-sc {
+      @include contentSide($desktopSizeSmall);
+
+      .content-container-frame-sc {        
+        
+        .page-block-title-wrapper-sc {
+          display: block;
+          @include contentBlockHeader();
+          border-bottom: 0px;
+          
+          .page-block-title-sc {
+            float: left;
+            padding: 12px 0 0 10px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: $greyColor;
+          }          
+        }
+      }
+    }
+  }
+  
+  //content block
+  .content-block-sc {
+    display: block;
+    width: 100%;
+    
+    .content-block-header-sc {
+      @include contentBlockHeader();
+      
+      .content-block-title-sc {
+        float: left;
+        padding: 14px 0 0 10px;
+        font-weight: bold;
+        color: $greyColor;
+      }
+      
+      .content-block-closeIcon-sc {
+        @include contentPanelBlockHeader();        
+        svg {
+          @include contentPanelBlockHeaderSvg();
+        }       
+      }
+      
+      .content-block-openIcon-sc {
+        @include contentPanelBlockHeader();        
+        display: none;
+        padding: 5px 40px 0 0;
+        svg {
+          @include contentPanelBlockHeaderSvg();
+        }       
+      }
+    }
+    
+    .content-block-header-sc:hover {
+      border-left: $contentMargin solid $contentBlockHeaderHoverBorderColor;
+      background-color: $contentBlockHeaderHoverColor;
+      
+      .content-block-title-sc {
+        color: $contentBlockHeaderHoverBorderColor;
+      }
+    }
+    
+    .content-block-content-sc {
+      margin: $contentMargin;
+    }
+  }
+  
+  .footer-container-sc {
+    display: block;
+    width: 100%;
+    height: $desktopfooterHeight;
+    
+    .footer-side-sc {
+      @include leftSide($desktopSizeSmall);
+      height: 100%;
+      border-bottom-left-radius: $bodyBorderRadius;
+    }
+    
+    .footer-content-sc {
+      @include contentSide($desktopSizeSmall);
+      font-size: $footerFontSize;
+      font-weight: $footerFontWeight;
+      background-color: #e3e3e3;
+      border-bottom-right-radius: $bodyBorderRadius;
+      
+      .footer-left-content-sc {        
+        @include footerContainer();
+        
+        span {
+          margin-left: 20px;
+          color: $footerTextColor;
+        }
+      }
+      
+      .footer-right-content-sc {
+        @include footerContainer();
+        
+        span {
+          float: right;
+          margin-right: 20px;
+          color: $footerTextColor;
+        }
+      }      
+    }    
+  }  
+ 
+  //commons
+  
+  input[type=button] {
+    min-width: $commonsMinWidth;
+    height: $desktopCommonsHeight;
+    margin: $buttonMargin;
+    border-radius: $desktopCommonsHeight / 2;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  input[type=text] {
+    min-width: $commonsMinWidth;
+    height: $desktopCommonsHeight;
+    padding-left: 5px;
+    color: $greyColor;
+  }
+  
+}
