@@ -154,21 +154,9 @@
           padding-top: 25px;
           margin : 0 auto;
           
-          .project-selector-sc {            
-            width: 100%;
-            height: 100%;            
-            border-radius: 50px; // 10px 0 0;
-            background-color: #202d36; //#3e4468;            
-            border: 1px solid #000000; //#3e4468;
-            color: #becbd4; //white;
-            padding-left: 20px;
-            outline: none;            
-
-            option {
-              color: white;              
-            }
-            
-          }          
+          .project-selector-sc {
+            display: none;
+          }
         }        
       }
       
@@ -196,12 +184,8 @@
         font-weight: bold;
         
         .side-menu-item-frame-sc {
-          display: table;
-          margin-left: auto;
-          margin-right: auto;
-          //padding-left: 30px;
-          //margin-left: 0px;
-          height: $sideMenuItemFrameHeight; 
+          display: grid;
+          height: $sideMenuItemFrameHeight;        
 
           .side-menu-item-text-sc {
             display: none;
@@ -218,6 +202,9 @@
         stroke: $desktopSVGColor;
         stroke-width: $desktopSVGStrokeWidth;
         margin-top: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;        
       }
 
       .side-menu-item-sc:hover {  
@@ -231,8 +218,8 @@
         }
         
         .side-menu-item-frame-sc {
-          border-radius: 50px 0px 0px 50px;
-          background-color: $logoDivBgColor;          
+          //border-radius: 50px 0px 0px 50px;
+          background-color: $defaultBlueColor;          
         }        
       }
       
@@ -298,11 +285,11 @@
     }
     
     .content-block-header-sc:hover {
-      border-left: $contentMargin solid $contentBlockHeaderHoverBorderColor;
-      background-color: $contentBlockHeaderHoverColor;
+      //border-left: $contentMargin solid $contentBlockHeaderHoverBorderColor;
+      background-color: $contentBlockHoverColor; 
       
       .content-block-title-sc {
-        color: $contentBlockHeaderHoverBorderColor;
+        color: $contentBlockHoverTitleColor;
       }
     }
     

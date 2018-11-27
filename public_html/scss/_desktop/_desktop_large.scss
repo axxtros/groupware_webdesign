@@ -227,7 +227,7 @@
         
         .side-menu-item-frame-sc {
           border-radius: 50px 0px 0px 50px;
-          background-color: $logoDivBgColor;          
+          background-color: $defaultBlueColor;          
         }        
       }
       
@@ -293,11 +293,11 @@
     }
     
     .content-block-header-sc:hover {
-      border-left: $contentMargin solid $contentBlockHeaderHoverBorderColor;
-      background-color: $contentBlockHeaderHoverColor;
+      //border-left: $contentMargin solid $contentBlockHeaderHoverBorderColor;
+      background-color: $contentBlockHoverColor; 
       
       .content-block-title-sc {
-        color: $contentBlockHeaderHoverBorderColor;
+        color: $contentBlockHoverTitleColor;
       }
     }
     
