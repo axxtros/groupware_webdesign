@@ -306,7 +306,7 @@
     .footer-side-sc {
       @include leftSide($desktopSizeSmall);
       height: 100%;
-      border-bottom-left-radius: $bodyBorderRadius;
+      //border-bottom-left-radius: $bodyBorderRadius;
     }
     
     .footer-content-sc {
@@ -314,7 +314,7 @@
       font-size: $footerFontSize;
       font-weight: $footerFontWeight;
       background-color: #e3e3e3;
-      border-bottom-right-radius: $bodyBorderRadius;
+      //border-bottom-right-radius: $bodyBorderRadius;
       
       .footer-left-content-sc {        
         @include footerContainer();

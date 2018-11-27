@@ -7,13 +7,22 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    
+    <script type="text/javascript">
+      if($.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))) {
+          window.location = 'mobile_template.html';
+      }
+      window.cookieconsent_options = {"message": "Ez a webhely cookie-kat használ, melyekre szükség van az oldalunk teljes működéséhez. Böngészésével elfogadja a cookie-k használatát.", "dismiss": "Megértettem", "learnMore": "További informácó", "link": null, "theme": "dark-bottom"};
+    </script>        
+    
   </head>
   <body onload="init();" onresize="setLogoImgPos();">
     
-    <!-- 
-      desktop/mobile device
-      noscript
-    -->
+    <noscript>
+      <div class="white-text" style="width: 40%;margin: 0 auto; text-align: center">
+        <p style="text-transform: uppercase">Kérjük engedélyezze böngészőjében a javascript futtatását.</p>
+      </div>      
+    </noscript>        
     
     <header id="header-container" class="header-container-sc">
       <a href="#">
