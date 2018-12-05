@@ -2,6 +2,9 @@
  * create: 02/10/2018 
  */
 
+var $inputBorderColor = '#ced9ef';         //ezek az értékek a _global.scss azonos nevű css változói
+var $inputBorderHoverColor = '#7786bd';
+
 function init() {  
   if(!checkMobileDevice()) {
     setLogoImgPos();
@@ -39,4 +42,31 @@ function blockPanelCtrl(blockPanelAnchor) {
       $(openIconDiv).css('display', 'none');
     }
   });
+}
+
+function onFocusInputEvent(inputComponent) {
+  if(inputComponent !== null) {
+    var controlExtComponent = $(inputComponent).next();
+    if(controlExtComponent !== null && $(controlExtComponent).hasClass('form-content-control-ext')) {
+      $(inputComponent).css('border-right', '1px solid ' + $inputBorderColor);
+      $(controlExtComponent).css('border-top', '1px solid ' + $inputBorderHoverColor);
+      $(controlExtComponent).css('border-right', '1px solid ' + $inputBorderHoverColor);
+      $(controlExtComponent).css('border-bottom', '1px solid ' + $inputBorderHoverColor);
+    } else {
+      $(inputComponent).css('border-right', '1px solid ' + $inputBorderHoverColor);
+    }
+  }
+}
+
+function onBlurInputEvent(inputComponent) {
+  if(inputComponent !== null) {
+    var controlExtComponent = $(inputComponent).next();
+    if(controlExtComponent !== null && $(controlExtComponent).hasClass('form-content-control-ext')) {      
+      $(controlExtComponent).css('border-top', '1px solid ' + $inputBorderColor);      
+      $(controlExtComponent).css('border-right', '1px solid ' + $inputBorderColor);      
+      $(controlExtComponent).css('border-bottom', '1px solid ' + $inputBorderColor);      
+    } else {
+      $(inputComponent).css('border-right', '1px solid ' + $inputBorderColor); 
+    }
+  }
 }
