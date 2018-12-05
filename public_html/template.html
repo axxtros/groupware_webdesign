@@ -6,23 +6,15 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    
-    <script type="text/javascript">
-      if($.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))) {
-          window.location = 'mobile_template.html';
-      }
-      window.cookieconsent_options = {"message": "Ez a webhely cookie-kat használ, melyekre szükség van az oldalunk teljes működéséhez. Böngészésével elfogadja a cookie-k használatát.", "dismiss": "Megértettem", "learnMore": "További informácó", "link": null, "theme": "dark-bottom"};
-    </script>        
-    
+    <meta charset="UTF-8">                
   </head>
-  <body onload="init();" onresize="setLogoImgPos();">
+  <body onload="init();" onresize="setLogoImgPos();">    
     
     <noscript>
-      <div class="white-text" style="width: 40%;margin: 0 auto; text-align: center">
+      <div style="width: 40%;margin: 0 auto; text-align: center">
         <p style="text-transform: uppercase">Kérjük engedélyezze böngészőjében a javascript futtatását.</p>
       </div>      
-    </noscript>        
+    </noscript>
     
     <header id="header-container" class="header-container-sc">
       <a href="#">
@@ -220,11 +212,41 @@
               </div>              
             </a>
             <div class="content-block-content-sc">              
-              <input type="button" value="Teszt" class="button-green-sc"/>
+              <input type="button" value="Teszt" class="button-light-green-sc"/>
+              <input type="button" value="Teszt" class="button-light-red-sc"/>
+              <input type="button" value="Teszt" class="button-light-yellow-sc"/>
+              <input type="button" value="Teszt" class="button-light-purple-sc"/>
               <input type="button" value="Teszt" class="button-red-sc"/>
-              <input type="button" value="Teszt" class="button-yellow-sc"/>
-              <input type="button" value="Teszt" class="button-purple-sc"/>
+              <input type="button" value="Teszt" class="button-blue-sc"/>
+              <input type="button" value="Teszt" class="button-grey-sc"/>
+              <input type="button" value="Teszt" class="button-green-sc"/>
               <input type="text"/>
+              <br/>
+              
+              <div class="form-content-wrapper">
+                <div class="form-content-label">
+                  <span>012345678901234567890123456789:</span>
+                </div>
+                <div class="form-content-control">
+                  <input class="form-content-control-component right-align-input" type="text"/>
+                  <div class="form-content-control-ext">
+                    <div class="form-content-control-ext-span-wrapper">
+                      <span>HUF</span>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="form-content-wrapper">
+                <div class="form-content-label">
+                  <span>012345678901234567890123456789:</span>
+                </div>
+                <div class="form-content-control">
+                  <input class="form-content-control-component" type="text"/>                  
+                </div>
+              </div>
+              
               <br/>
               #content<br/>
               #content<br/>

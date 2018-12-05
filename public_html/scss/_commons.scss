@@ -1,6 +1,12 @@
 
-//buttons ----------------------------------------------------------------------
-input[type=button] {  
+//buttons ----------------------------------------------------------------------  
+input[type=button] {
+  min-width: $commonsMinWidth;
+  height: $desktopCommonsHeight;
+  margin: $buttonMargin;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 1.2em;
   border: none;  
   color: $buttonTextColor;
 }
@@ -9,50 +15,128 @@ input[type=button]:hover {
   cursor: pointer;  
 }
 
-.button-green-sc {
-  background-color: $buttonBgGreenColor;    
+.button-light-green-sc {
+  background-color: $buttonBgLightGreenColor;    
 }
 
-.button-green-sc:hover {
-  background-color: $buttonBgGreenHoverColor;
+.button-light-green-sc:hover {
+  background-color: $buttonBgLightGreenHoverColor;
+}
+
+.button-light-red-sc {
+  background-color: $buttonBgLightRedColor;    
+}
+
+.button-light-red-sc:hover {
+  background-color: $buttonBgLightRedHoverColor;
+}
+
+.button-light-yellow-sc {
+  background-color: $buttonBgLightYellowColor;    
+}
+
+.button-light-yellow-sc:hover {
+  background-color: $buttonBgLightYellowHoverColor;
+}
+
+.button-light-purple-sc {
+  background-color: $buttonBgLightPurpleColor;    
+}
+
+.button-light-purple-sc:hover {
+  background-color: $buttonBgLightPurpleHoverColor;
 }
 
 .button-red-sc {
   background-color: $buttonBgRedColor;    
 }
 
-.button-red-sc:hover {
-  background-color: $buttonBgRedHoverColor;
+.button-blue-sc {
+  background-color: $buttonBgBlueColor;    
 }
 
-.button-yellow-sc {
-  background-color: $buttonBgYellowColor;    
+.button-grey-sc {
+  background-color: $buttonBgGreyColor;
 }
 
-.button-yellow-sc:hover {
-  background-color: $buttonBgYellowHoverColor;
+.button-green-sc {
+  background-color: $buttonBgGreenColor;
 }
 
-.button-purple-sc {
-  background-color: $buttonBgPurpleColor;    
-}
-
-.button-purple-sc:hover {
-  background-color: $buttonBgPurpleHoverColor;
-}
 //buttons end ------------------------------------------------------------------
 
 //inputs -----------------------------------------------------------------------
-input[type=text], textarea {
+input[type=text], input[type=number], textarea {
+  min-width: $commonsMinWidth;
+  height: $desktopCommonsHeight;
+  padding-left: $formComponentPadding;
+  color: $greyColor;
   border: 1px solid $inputBorderColor;
 }
 
-input[type=text]:hover, textarea:hover {
-  border: 1px solid $inputBorderHoverColor;
+input[type=text], input[type=number]:hover, textarea:hover {
+  //border: 1px solid $inputBorderHoverColor;
 }
 
-input[type=text]:focus, textarea:focus {
-  box-shadow: 0 0 5px $inputBorderHoverColor;
-  border: 1px solid $inputBorderHoverColor;
+input[type=text], input[type=number]:focus, textarea:focus {
+  outline: none;  
+  /*border: 1px solid $inputBorderHoverColor;*/
 }
 //inputs end -------------------------------------------------------------------
+
+//form contents ----------------------------------------------------------------
+.form-content-wrapper {
+  display: inline-flex;
+  margin: 5px 0 5px 0;
+  width: 100%;
+  height: 30px; 
+  background-color: transparent;
+  
+  .form-content-label {
+    float: left;
+    padding: 10px 0 0 0;
+    width: 220px;
+    
+    span {
+      font-size: 1em;
+    }
+    
+  }
+  
+  .form-content-control {
+    float: right;
+    padding: 1px 0 0 10px;
+    
+    .form-content-control-component {
+      float: left;
+      min-width: 200px;      
+    }
+    
+    .right-align-input {      
+      text-align: right;      
+      padding-left: 0;
+      padding-right: $formComponentPadding;
+    }
+    
+    .form-content-control-ext {
+      float: left;
+      height: $desktopCommonsHeight + 2;
+      border-top: 1px solid $inputBorderColor;
+      border-right: 1px solid $inputBorderColor;
+      border-bottom: 1px solid $inputBorderColor;
+      background-color: $contentBlockHeaderBgColor;
+      
+      .form-content-control-ext-span-wrapper {
+        padding: 8px 10px 0 10px;
+        
+        span {
+          font-size: 1em;
+          margin: 10px 0 0 0;
+        }      
+      }      
+    }    
+  }
+  
+}
+
+//form contents end ------------------------------------------------------------
