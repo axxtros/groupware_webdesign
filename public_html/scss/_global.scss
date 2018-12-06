@@ -19,6 +19,10 @@ $contentBlockHoverTitleColor: #000000;
 $contentBgColor: #f9f9f9;
 $footerBgColor: #ffffff;
 
+//info panel
+$warnPanelBgColor : '#ec5e5e';            //ezeket az értékekeket át kell vezetni a main.js-be is, azonos névvel
+$warnPanelBrdColor : '#c70000';
+
 $inputBorderColor: #ced9ef;               //ezeket az értékekeket át kell vezetni a main.js-be is, azonos névvel
 $inputBorderHoverColor: #7786bd;
 
@@ -39,5 +43,4 @@ $buttonBgGreenColor: #26b731;
 /*
   https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
   https://drafts.csswg.org/css-device-adapt/#viewport-meta
-
 */

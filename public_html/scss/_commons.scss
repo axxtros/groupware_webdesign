@@ -140,3 +140,31 @@ input[type=text]:focus, input[type=number]:focus, textarea:focus {
 }
 
 //form contents end ------------------------------------------------------------
+
+//info-panel -------------------------------------------------------------------
+.info-panel {
+  position: static;
+  display: none;
+  z-index: 1009;
+  width: auto;
+  min-height: 20px;
+  //background-color: none;
+  //border-left: 5px solid none;
+  
+  .info-panel-text {
+    padding: 5px 0 5px 0;
+    text-align: center;
+    
+    span {
+      word-wrap: break-word;
+      font-size: 0.9em;      
+      color: white;
+    }    
+  }
+}
+
+.info-hidden-panel {
+  display: none;
+  width: auto;
+}
+//info-panel end ---------------------------------------------------------------

@@ -2,8 +2,17 @@
  * create: 02/10/2018 
  */
 
-var $inputBorderColor = '#ced9ef';         //ezek az értékek a _global.scss azonos nevű css változói
+var $warnPanelBgColor = '#ec5e5e';       //ezek az értékek a _global.scss azonos nevű css változói
+var $warnPanelBrdColor = '#c70000';
+var $infoPanelBgColor = '#3e66f5';
+var $infoPanelBrdColor = '#1242af';
+
+var $inputBorderColor = '#ced9ef';          //ezek az értékek a _global.scss azonos nevű css változói
 var $inputBorderHoverColor = '#7786bd';
+
+var infoPanelTop = 0;
+var infoPanelWidth = 0;
+var isFirstInfPanelTop = true;
 
 function init() {  
   if(!checkMobileDevice()) {
@@ -68,5 +77,61 @@ function onBlurInputEvent(inputComponent) {
     } else {
       $(inputComponent).css('border-right', '1px solid ' + $inputBorderColor); 
     }
+  }
+}
+
+function pageOnScrollEvent() {
+  infoPanelSticky();
+}
+
+function infoPanelSticky() {
+  var infoPanel = $('.info-panel'); 
+  var infoHiddenPanel = $('.info-hidden-panel'); 
+  if(infoPanel !== null && $(infoPanel).css('display') === 'block') {
+    var windowScroll = $(window).scrollTop();    
+    if(windowScroll >= infoPanelTop) {
+      if(isFirstInfPanelTop) {
+        infoPanelTop = infoPanel.position().top;
+        infoPanelWidth = $('.page-block-title-wrapper-sc').width();
+        infoPanelHeight = $('.page-block-title-wrapper-sc').height();
+        infoHiddenPanel.css('width', infoPanelHeight + 'px');
+        infoHiddenPanel.css('display', 'block');
+        infoPanel.css({'position': 'fixed', 'top': '0px', 'width' : infoPanelWidth + 'px'});
+        isFirstInfPanelTop = false;
+      }
+    } else {
+      if(!isFirstInfPanelTop) {
+        infoHiddenPanel.css('dispaly', 'none');
+        infoPanel.css({'position': 'static'});
+        isFirstInfPanelTop = true;
+      }
+    }
+  }
+}
+
+function openInfoPanel(panelType, panelText) {
+  var infoPanel = $('.info-panel');
+  if(infoPanel !== null) {
+    var bgColor = null;
+    var brdColor = null;
+    switch(panelType) {
+      case 'warn' : 
+        bgColor = $warnPanelBgColor;
+        brdColor = $warnPanelBrdColor;
+        break;
+      case 'info' : 
+        bgColor = $infoPanelBgColor;
+        brdColor = $infoPanelBrdColor;
+        break;
+      default :
+        bgColor = '#000000';
+        brdColor = '#000000';
+        break;
+    }
+    $(infoPanel).css('background-color', bgColor);    
+    $(infoPanel).css('border-left', '5px solid' + brdColor);
+    var spanElement = $(infoPanel).children().children();
+    spanElement.text(panelText);
+    $(infoPanel).css('display', 'block');
   }
 }
